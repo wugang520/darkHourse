@@ -21,14 +21,11 @@ export default {
   },
   mounted () {
     axios({
-      url: 'https://m.maizuo.com/gateway?k=479750',
-      method: 'GET',
-      Headers: {
-        'X-Client-Info': '{"a":"3000","ch":"1002","v":"5.2.1","e":"16800149252185451158896641"}',
-        'X-Host': 'mall.film-ticket.city.list'
-      }
+      url: '/hello',
+      method: 'GET'
     }).then(res => {
-      this.dataList = res.data.data.films
+      debugger
+      this.dataList = res.data.data
     })
   }
 }
