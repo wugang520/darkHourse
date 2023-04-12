@@ -2,7 +2,7 @@
   <div >
 
     <ul>
-      <li v-for="data in dataList" :key="data" @click="handchang(data)">
+      <li v-for="data in dataList" :key="data" >
          {{data}}
       </li>
     </ul>
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+
 export default {
   name: 'Film',
   data () {
@@ -19,9 +19,9 @@ export default {
       dataList: []
     }
   },
-  mounted () {
-    axios({
-      url: '/hello',
+  created () {
+    this.$axios({
+      url: this.HOST + '/api/student/get/list',
       method: 'GET'
     }).then(res => {
       debugger

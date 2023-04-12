@@ -1,9 +1,8 @@
 <template>
    <div id="app">
-    <div id='nav'>
-         <router-link to='/Student'> Student </router-link>
+    <router-link>sdf </router-link>
+    <router-link>sdf </router-link>
     <router-view/>
-    </div>
   </div>
 </template>
 
